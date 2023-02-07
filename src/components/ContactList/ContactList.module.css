@@ -1,34 +1,13 @@
-.list {
-  width: 320px;
-  margin: 0;
-  padding: 0;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.text {
-  justify-content: space-between;
-  margin-right: 15px;
-}
-.container {
-  width: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.btnDelete {
-  height: 20px;
-  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
-  border: none;
+.buttonDel {
+  margin-left: 15px;
+  padding: 5px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 250ms linear;
 }
 
-.btnDelete:hover,
-.btnDelete:focus {
-  background-color: #b5ddf2;
+.buttonDel:hover {
+  background-color: rgb(202, 85, 95);
+}
+
+li {
+  margin-bottom: 10px;
 }
