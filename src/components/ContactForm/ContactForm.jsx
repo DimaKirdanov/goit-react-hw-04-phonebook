@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import css from '../ContactForm/ContactForm.module.css';
+import styles from '../ContactForm/ContactForm.module.css';
 import { useState } from 'react';
 
-export const ContactForm = ({ addContact }) => {
+const ContactForm = ({ addContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const data = { name, number };
@@ -14,34 +14,35 @@ export const ContactForm = ({ addContact }) => {
     setNumber('');
   };
 
-  const onHandleChange = e => {
-    switch (e.target.name) {
+  const handleChange = e => {
+    const { name, value } = e.target;
+    switch (name) {
       case 'name':
-        setName(e.target.value);
+        setName(value);
         break;
 
       case 'number':
-        setNumber(e.target.value);
+        setNumber(value);
         break;
 
       default:
-        return 0;
+        return;
     }
   };
 
   return (
-    <form onSubmit={onHandleSubmit} className={css.form}>
+    <form onSubmit={onHandleSubmit} className={styles.form}>
       <label>
         Name:
         <input
-          className={css.input}
+          className={styles.input}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           value={name}
-          onChange={onHandleChange}
+          onChange={handleChange}
         />
       </label>
       <label>
@@ -53,16 +54,17 @@ export const ContactForm = ({ addContact }) => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           value={number}
-          onChange={onHandleChange}
+          onChange={handleChange}
         />
       </label>
 
-      <button className={css.buttonAdd} type="submit">
+      <button className={styles.buttonAdd} type="submit">
         add contact
       </button>
     </form>
   );
 };
+export default ContactForm;
 
 ContactForm.propTypes = {
   addContact: PropTypes.func.isRequired,

@@ -1,6 +1,6 @@
 import Proptypes from 'prop-types';
 
-export const Filter = ({ value, onChangeFilter }) => {
+ const Filter = ({ value, onChangeFilter }) => {
   return (
     <>
       <label>
@@ -18,6 +18,8 @@ export const Filter = ({ value, onChangeFilter }) => {
     </>
   );
 };
+
+export default Filter;
 
 Filter.propTypes = {
   value: Proptypes.string,
