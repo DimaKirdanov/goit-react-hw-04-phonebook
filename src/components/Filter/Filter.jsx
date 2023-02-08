@@ -1,6 +1,6 @@
 import Proptypes from 'prop-types';
 
- const Filter = ({ value, onChangeFilter }) => {
+const Filter = ({ value, onChangeFilter }) => {
   return (
     <>
       <label>

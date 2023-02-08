@@ -12,7 +12,7 @@ input {
   width: 150px;
   text-transform: capitalize;
   padding: 5px;
-  background-color: rgb(75, 125, 131, .5);
+  background-color: rgb(75, 125, 131, 0.5);
   border-radius: 5px;
 }
 

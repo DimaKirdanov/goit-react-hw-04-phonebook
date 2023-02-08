@@ -3,11 +3,11 @@
   padding: 5px;
   border-radius: 5px;
 }
-.buttonDel{
-background-color: rgb(75, 125, 131, .5);
+.buttonDel {
+  background-color: rgb(75, 125, 131, 0.5);
 }
 .buttonDel:hover {
-    background-color: rgb(75, 125, 131);
+  background-color: rgb(75, 125, 131);
 }
 
 li {
